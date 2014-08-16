@@ -1,0 +1,112 @@
+.intro .header
+	font-size: 2.8em
+
+.methods .description
+	font-size: 1.4em
+
+.column-wrap
+	display: inline
+	margin-bottom: 60px
+
+section
+	margin-top: 100px
+	width: $first-breakpoint-width
+	font-weight: 400
+	box-sizing: border-box
+
+	body > &:last-child
+		margin-bottom: 80px
+
+	&.intro
+		text-align: center
+		position: relative
+
+		.header
+			color: $black
+
+		.description
+			margin-top: 10px
+			font-size: 1.8em
+			line-height: 1.2
+			color: $calmer-black
+
+	.header
+		font-size: 2em
+		color: $black
+		text-align: center
+		font-weight: 400
+		margin: 0
+
+	.octicon
+		margin: 0 15px 0 -50px
+		display: inline
+		font-size: 35px
+		text-align: center
+		color: #333
+
+		&.octicon-pencil, &.octicon-comment
+			font-size: 31px;
+			margin-left: -46px;
+
+	.description
+		margin: 15px 0 0px 0
+		line-height: 1.2
+		font-size: 1.4em
+		color: $calmer-black
+
+	ul
+		margin-left: 20px
+
+		li
+			margin: 6px 0
+			font-size: 1.25em
+
+			a
+				color: $red
+
+section, .column-wrap
+	margin-left: auto
+	margin-right: auto
+
+@media all and (min-width: $first-breakpoint)
+	section, .column-wrap
+		width: $first-breakpoint-width
+
+@media all and (min-width: $second-breakpoint)
+	section
+		font-size: 110%
+
+		.description
+			font-size: 1.3em
+
+		.methods
+			ul li
+				font-size: 1.2em
+
+			.description
+				font-size: 1.25em
+
+	section, .column-wrap
+		width: $second-breakpoint-width
+		display: block
+
+	.column-left
+		padding-left: 0
+		padding-right: 5%
+
+	.column-right
+		padding-right: 0
+		padding-left: 5%
+
+	.column-left, .column-right
+		width: 49.5%
+		display: inline-block
+		vertical-align: top
+
+@media all and (min-width: $third-breakpoint)
+	section, .column-wrap
+		width: $third-breakpoint-width
+
+@media all and (min-width: $fourth-breakpoint)
+	section, .column-wrap
+		width: $fourth-breakpoint-width
