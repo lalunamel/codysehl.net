@@ -1,21 +1,25 @@
 {
-  "name": "your-app",
-  "description": "Description",
-  "author": "Your Name",
-  "version": "0.0.1",
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "dependencies": {
-    "clean-css-brunch": "~1.7.1",
-    "css-brunch": "~1.7.0",
-    "jaded-brunch": "^1.7.11",
-    "javascript-brunch": "~1.7.1",
-    "minimatch": "^1.0.0",
-    "stylus-brunch": "~1.7.0"
-  },
-  "devDependencies": {
-    "gulp": "^3.8.7"
-  }
+	"name": "your-app",
+	"description": "Description",
+	"author": "Your Name",
+	"version": "0.0.1",
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"dependencies": {
+		"clean-css-brunch": "~1.7.1",
+		"css-brunch": "~1.7.0",
+		"jaded-brunch": "^1.7.11",
+		"javascript-brunch": "~1.7.1",
+		"minimatch": "^1.0.0",
+		"stylus-brunch": "~1.7.0",
+		"gulp": "^3.8.7"
+	},
+	"scripts": {
+		"preinstall": "npm install",
+		"install": "gulp",
+
+		"build": "brunch build"
+	}
 }
