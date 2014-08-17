@@ -1,7 +1,7 @@
 #! /usr/bin/env sh
 # Deploys to gh-pages branch then pushes
 
-git checkout gh-pages
+git checkout -b gh-pages
 # Stage the public dir and stash it
 git add ./public
 git stash
