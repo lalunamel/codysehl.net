@@ -1,13 +1,13 @@
 language: node_js
 node_js:
-	- "0.10"
+  - 0.10
 env:
-	secure: "TEYuegNvDTSAzqF87CMrGdBSDPjOsscGjB/zRBMKPVPhRgT+nsOTTM7GQWnppKDU13alLZ95Go4UVDiRgJjVjc0DqIXlTFSd/Pbv0C47c/Ql0OeIWizDVJ9fsfsqzZevS2iAp0VW4Bi9aTteUYHHXN9F9P06n446NYw8RMNNO7I="
+  secure: "TEYuegNvDTSAzqF87CMrGdBSDPjOsscGjB/zRBMKPVPhRgT+nsOTTM7GQWnppKDU13alLZ95Go4UVDiRgJjVjc0DqIXlTFSd/Pbv0C47c/Ql0OeIWizDVJ9fsfsqzZevS2iAp0VW4Bi9aTteUYHHXN9F9P06n446NYw8RMNNO7I="
 branches:
-	only:
-		- master
+  only:
+    - master
 install: 
-	- git config --global user.email "cody.sehl+Travis@gmail.com"
-	- git config --global user.name "Travis"
-	- npm install
+  - git config --global user.email "cody.sehl+Travis@gmail.com"
+  - git config --global user.name "Travis"
+  - npm install
 script: ./travis/build.sh
