@@ -1,7 +1,7 @@
 {
-	"name": "your-app",
-	"description": "Description",
-	"author": "Your Name",
+	"name": "codysehl.net",
+	"description": "Cody Sehl's Homepage!",
+	"author": "Cody Sehl",
 	"version": "0.0.1",
 	"repository": {
 		"type": "git",
