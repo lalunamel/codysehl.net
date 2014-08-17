@@ -18,4 +18,4 @@ rm -r ./public
 git add -A
 git commit --allow-empty-message -am ''
 # PUSH IT
-git push
+git push https://github.com/lalunamel/codysehl.net.git gh-pages
