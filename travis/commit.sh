@@ -8,6 +8,8 @@ git add -f ./public
 git stash
 # Delete everything except .git
 rm -rf ./*
+rm .travis.yml
+rm .gitignore
 # Pop the public dir back into our working dir and move it's contents up into ./
 git stash pop
 mv ./public/* .
