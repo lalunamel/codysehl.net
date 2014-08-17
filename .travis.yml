@@ -10,4 +10,6 @@ install:
   - git config --global user.email "cody.sehl+Travis@gmail.com"
   - git config --global user.name "Travis"
   - npm install
-script: ./travis/build.sh
+script: 
+  - ./travis/build.sh
+  - ./travis/deploy.sh
