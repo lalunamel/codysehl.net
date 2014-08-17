@@ -17,9 +17,6 @@
 		"gulp": "^3.8.7"
 	},
 	"scripts": {
-		"preinstall": "npm install",
-		"install": "gulp",
-
 		"build": "brunch build"
 	}
 }
