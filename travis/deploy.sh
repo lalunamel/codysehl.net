@@ -3,7 +3,7 @@
 
 git checkout -b gh-pages
 # Stage the public dir and stash it
-git add ./public
+git add -f ./public
 git stash
 # Delete everything except .git
 rm -rf ./*
