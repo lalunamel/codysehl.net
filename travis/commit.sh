@@ -1,5 +1,6 @@
 #! /usr/bin/env sh
-# Deploys to gh-pages branch then pushes
+# 2
+# Commits the ./public dir
 
 git checkout -b gh-pages
 # Stage the public dir and stash it
@@ -14,5 +15,3 @@ rm -r ./public
 # Commit the static files that were in ./public, now at ./
 git add -A
 git commit --allow-empty-message -am ''
-# PUSH IT
-git push https://github.com/lalunamel/codysehl.net.git gh-pages

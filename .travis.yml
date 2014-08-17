@@ -1,15 +1,18 @@
 language: node_js
 node_js:
-  - 0.10
-env:
-  secure: "TEYuegNvDTSAzqF87CMrGdBSDPjOsscGjB/zRBMKPVPhRgT+nsOTTM7GQWnppKDU13alLZ95Go4UVDiRgJjVjc0DqIXlTFSd/Pbv0C47c/Ql0OeIWizDVJ9fsfsqzZevS2iAp0VW4Bi9aTteUYHHXN9F9P06n446NYw8RMNNO7I="
+- 0.1
 branches:
   only:
-    - master
-install: 
-  - git config --global user.email "cody.sehl+Travis@gmail.com"
-  - git config --global user.name "Travis"
-  - npm install
-script: 
-  - ./travis/build.sh
-  - ./travis/deploy.sh
+  - master
+install:
+- git config --global user.email "cody.sehl+travis@gmail.com"
+- git config --global user.name "Travis"
+- npm install
+script:
+- ./travis/build.sh
+- ./travis/commit.sh
+after_success:
+- ./travis/push.sh
+env:
+  global:
+    secure: "hUqYb5otOUE46f0k0XtMPkB60QJUOzAguK9N/Vf93yhxx8bbAf6NFdFpCOyY0GE1HQSR3jxFIYXzf+dMNzIEFPI+9kinS/WQ5MY3DTV+3VPGYCzkdtdGS8CYcAess4FlPCfSBNaabEJ5V+anyyK3WTLrsHFGUzFiekt0MSIGCk0="
