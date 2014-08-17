@@ -1,9 +1,6 @@
 #! /usr/bin/env sh
 # Deploys to gh-pages branch then pushes
 
-# Set the git configs so that we know Travis is building this commit
-git config user.email travis
-
 git checkout gh-pages
 # Stage the public dir and stash it
 git add ./public
