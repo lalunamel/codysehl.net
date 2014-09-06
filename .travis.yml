@@ -17,4 +17,4 @@ after_success:
 - git push -f https://github.com/lalunamel/codysehl.net.git gh-pages
 env:
   global:
-    secure: OfeWWk5Shk507Up1aowPCMq/mtwMCyDwVH5CsqyUGnHptqnPNpKZcXHsKD7cl9AcBwa9Giz2Dh4hNJq0FBJxRjlWhAUvg17TFnOJ3yAkPwUQcMt0ZdPdpy4lRlsNzQLD3VjQeG6D9gw3ZBNYguYqBLgJqs6+HCiBDSRjOtmlP+s=
+    secure: BjNgiU/+M1fGmH0DDsyU+kv1KuXoOuiXd7LjzyVGvO28lYRXgdZEpUPYtmKE+LYWZ6XD9W/vtBIOZp9/nGV3IaiKgheMRBZab8G1AmzcIF+PD62RBIcJFnooES2YZUmmJJ9wx2cCdbN/VV1UKZIsU1Pa/U6C+SPF+vIFAEAd8jM=
