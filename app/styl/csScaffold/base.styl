@@ -1,11 +1,8 @@
-$blue = #289cd8
-$calm-blue = lighten($blue, 10%)
-$black = #0b0b0b
-$calm-black = lighten($black, 25%)
-$calmer-black = lighten($black, 30%)
-$red = #f0424b
-
 $futura = "futura-pt"
+
+.octicons 
+	height: auto
+	width: auto
 
 html, body
 	font-family: $futura, "Arial", sans
@@ -18,10 +15,10 @@ a
 		text-decoration: underline
 em
 	font-style: italic
-
 nav
 	height: 60px
-	border-bottom: 1px solid lighten($calmer-black, 52%)
+	border-bottom: 1px solid #adadad
+
 	font-size: 1.6em
 	font-weight: 400
 	a
@@ -34,10 +31,6 @@ nav
 		li
 			display: inline
 			margin: 0 7%
-
-.octicons 
-	height: auto
-	width: auto
 
 @media all and (min-width: 700px)
 	section
