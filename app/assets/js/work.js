@@ -1,33 +1,51 @@
-$(function() {
-	// Create the work nav
-	$(".work-block").each(function(index, workBlock) {
-		var $workBlock = $(workBlock);
-		var workTitle = $workBlock.find(".header").first().html();
+(function() {
+  // Create the work nav
+  Array.from(document.getElementsByClassName("work-block")).forEach(function(workBlock) {
+    var workTitle = workBlock.getElementsByClassName("header")[0].innerText;
 
-		// Create an id on the workBlock
-		$workBlock.attr("id", workTitle);
+    // Create an id on the workBlock
+    workBlock.setAttribute("id", workTitle);
 
-		// Create a link to that id on the navBlock
-		var $navBlock = $("<li></li>").append($("<a></a>").append($("<p></p>")));
-		$navBlock.find("a").attr("href", "#" + workTitle);
-		$navBlock.find("p").html(workTitle);
+    // Create a link to that id on the navBlock
+    var navLi = document.createElement("li");
+    var navLink = document.createElement("a");
+    var navP = document.createElement("p");
 
-		// Attach the navBlock to the DOM
-		$(".navigation").append($navBlock);
-	});
+    navLink.setAttribute("href", "#" + workTitle);
+    navP.innerText = workTitle;
 
-	// Create a div that will hide all but the top three navBlocks
-	var $hidden = $("<div></div>", { "class": "hider hidden" });
-	$hidden.append($(".navigation").children().not(":nth-child(1)").not(":nth-child(2)").not(":nth-child(3)"));
+    navLink.appendChild(navP);
+    navLi.appendChild(navLink);
 
-	// Add a "more" link
-	$moreLink = $("<li></li>").append($("<a></a>", { "class": "more", href: "#", on: { click: function(e) {
-		e.preventDefault();
-		$hidden.toggleClass("hidden");
-		$(e.target).parents("li").remove();
-	}}})
-	.html(". . ."));
+    // Attach the navBlock to the DOM
+    document.getElementsByClassName("navigation")[0].appendChild(navLi);
+  });
 
-	$(".navigation").append($hidden);
-	$(".navigation").append($moreLink);
-});
+  // Create a div that will hide all but the top three navBlocks
+  var hiddenDiv = document.createElement("div");
+  hiddenDiv.setAttribute("class", "hider hidden");
+  Array.from(document.getElementsByClassName("navigation")[0].children).forEach(function(element, i) {
+    if (i > 2) {
+      hiddenDiv.appendChild(element);
+    }
+  });
+
+  // Add a "more" link
+  var moreLi = document.createElement("li");
+  var moreLink = document.createElement("a");
+
+  moreLink.setAttribute("class", "more");
+  moreLink.setAttribute("href", "#");
+  moreLink.onclick = function(e) {
+    e.preventDefault();
+    // Remove the "hidden" class
+    hiddenDiv.setAttribute("class", "hider");
+    moreLi.remove();
+  };
+  moreLink.innerText = ". . .";
+
+  moreLi.appendChild(moreLink);
+
+  document.getElementsByClassName("navigation")[0].appendChild(hiddenDiv);
+  document.getElementsByClassName("navigation")[0].appendChild(moreLi);
+})();
