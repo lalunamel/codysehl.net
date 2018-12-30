@@ -3,10 +3,10 @@
 # Builds junk
 
 echo '### Installing bower packages ###'
-npx bower install
+./node_modules/.bin/bower install
 
 echo '### Moving bower packages to their final destinations ###'
-npx gulp bower-move
+./node_modules/.bin/gulp bower-move
 
 echo '### Building the public directory ###'
-npx brunch build -P 
+./node_modules/.bin/brunch build -P 
