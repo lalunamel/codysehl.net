@@ -1,5 +1,5 @@
 (function() {
-  // Create the work nav
+  // Create the Work navigation menu
   Array.from(document.getElementsByClassName("work-block")).forEach(function(workBlock) {
     var workTitle = workBlock.getElementsByClassName("header")[0].innerText;
 
@@ -48,4 +48,16 @@
 
   document.getElementsByClassName("navigation")[0].appendChild(hiddenDiv);
   document.getElementsByClassName("navigation")[0].appendChild(moreLi);
+
+  // Assign each of the work blocks to a column (either left or right)
+  //   so that they read from left to right, then top to bottom
+  Array.from(document.getElementsByClassName("work-block")).forEach(function(workBlock, i) {
+    if (i % 2 == 0) {
+      // even / left
+      workBlock.setAttribute("class", "work-block column-left");
+    } else {
+      // odd / right
+      workBlock.setAttribute("class", "work-block column-right");
+    }
+  });
 })();
